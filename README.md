@@ -31,7 +31,7 @@ A FHIR R4 compliant sandbox API for healthcare data interoperability. FhirSide p
 - [ ] Persistent database storage (PostgreSQL/SQLite)
 - [ ] Additional FHIR resources (Condition, Procedure, DiagnosticReport)
 - [ ] FHIR search parameters and modifiers
-- [ ] Bulk data export (FHIR Bulk Data Access)
+- [x] Bulk data export (FHIR Bulk Data Access)
 - [ ] Subscription-based notifications
 
 ## 🚀 Getting Started
@@ -125,6 +125,35 @@ Once the application is running, access the interactive Swagger documentation at
 | POST | `/fhir/MedicationRequest` | Create a new medication request |
 | PUT | `/fhir/MedicationRequest/{id}` | Update an existing medication request |
 | DELETE | `/fhir/MedicationRequest/{id}` | Delete a medication request |
+
+#### Bulk Data Export (FHIR Bulk Data Access IG)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/fhir/$export` | Initiate system-level bulk export |
+| GET | `/fhir/Patient/$export` | Initiate patient-level bulk export |
+| GET | `/fhir/$export-status/{jobId}` | Get export job status |
+| GET | `/fhir/$export-download/{jobId}/{fileName}` | Download exported NDJSON file |
+| DELETE | `/fhir/$export-status/{jobId}` | Delete export job |
+
+##### Bulk Export Workflow
+1. **Initiate Export**: Call `GET /fhir/$export` to start an export job
+2. **Get Status URL**: Check the `Content-Location` header in the 202 response
+3. **Poll for Status**: Call the status URL until export completes
+4. **Download Files**: Use the URLs in the completed status response to download NDJSON files
+
+##### Example
+```bash
+# Start export
+curl -i http://localhost:5000/fhir/\$export
+# Returns: 202 Accepted with Content-Location header
+
+# Check status (use URL from Content-Location header)
+curl http://localhost:5000/fhir/\$export-status/{jobId}
+# Returns: Job status with download URLs when complete
+
+# Download NDJSON file
+curl http://localhost:5000/fhir/\$export-download/{jobId}/Patient.ndjson
+```
 
 ## 🏗️ Project Structure
 

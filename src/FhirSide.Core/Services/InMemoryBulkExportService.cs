@@ -40,7 +40,7 @@ public class InMemoryBulkExportService : IBulkExportService
         _exportFiles.TryAdd(job.Id, new ConcurrentDictionary<string, string>());
 
         // Execute export asynchronously
-        _ = ExecuteExportAsync(job, includeAllResources: true);
+        _ = ExecuteExportAsync(job);
 
         return job;
     }
@@ -52,7 +52,7 @@ public class InMemoryBulkExportService : IBulkExportService
         _exportFiles.TryAdd(job.Id, new ConcurrentDictionary<string, string>());
 
         // Execute export asynchronously
-        _ = ExecuteExportAsync(job, includeAllResources: true);
+        _ = ExecuteExportAsync(job);
 
         return job;
     }
@@ -93,7 +93,7 @@ public class InMemoryBulkExportService : IBulkExportService
         };
     }
 
-    private async Task ExecuteExportAsync(BulkExportJob job, bool includeAllResources)
+    private async Task ExecuteExportAsync(BulkExportJob job)
     {
         try
         {
