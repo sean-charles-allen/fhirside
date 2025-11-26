@@ -10,6 +10,11 @@ namespace FhirSide.Api.Formatters;
 /// <summary>
 /// Output formatter that serializes FHIR resources using the FHIR JSON serializer.
 /// </summary>
+/// <remarks>
+/// This formatter uses the Hl7.Fhir SDK's ToJson extension method to produce
+/// FHIR-compliant JSON output. The Task alias is required due to ambiguity
+/// between System.Threading.Tasks.Task and Hl7.Fhir.Model.Task (FHIR Task resource).
+/// </remarks>
 public class FhirJsonOutputFormatter : TextOutputFormatter
 {
     public FhirJsonOutputFormatter()
@@ -33,6 +38,7 @@ public class FhirJsonOutputFormatter : TextOutputFormatter
     {
         var response = context.HttpContext.Response;
 
+        // CanWriteType ensures we only get called for Base types, but we check defensively
         if (context.Object is Base fhirResource)
         {
             // Use the FHIR SDK's ToJson extension method for proper FHIR-compliant JSON serialization

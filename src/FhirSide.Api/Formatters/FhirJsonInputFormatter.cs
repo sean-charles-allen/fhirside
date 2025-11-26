@@ -11,6 +11,11 @@ namespace FhirSide.Api.Formatters;
 /// <summary>
 /// Input formatter that deserializes FHIR JSON to FHIR resources.
 /// </summary>
+/// <remarks>
+/// This formatter uses System.Text.Json with the Hl7.Fhir SDK's ForFhir() extension
+/// to properly deserialize FHIR-compliant JSON. The Task alias is required due to ambiguity
+/// between System.Threading.Tasks.Task and Hl7.Fhir.Model.Task (FHIR Task resource).
+/// </remarks>
 public class FhirJsonInputFormatter : TextInputFormatter
 {
     private static readonly JsonSerializerOptions FhirJsonOptions;
