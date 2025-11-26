@@ -18,6 +18,7 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IEncounterService, InMemoryEncounterService>();
         services.AddSingleton<IObservationService, InMemoryObservationService>();
         services.AddSingleton<IMedicationRequestService, InMemoryMedicationRequestService>();
+        services.AddSingleton<IBulkExportService, InMemoryBulkExportService>();
         
         return services;
     }
