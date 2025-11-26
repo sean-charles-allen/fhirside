@@ -1,0 +1,11 @@
+meta {
+  name: Gets all encounters.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/fhir/Encounter
+  body: none
+  auth: inherit
+}

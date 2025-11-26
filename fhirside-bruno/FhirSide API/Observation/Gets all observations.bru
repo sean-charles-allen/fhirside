@@ -1,0 +1,11 @@
+meta {
+  name: Gets all observations.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/fhir/Observation
+  body: none
+  auth: inherit
+}

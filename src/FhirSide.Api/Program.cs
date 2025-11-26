@@ -39,6 +39,37 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 
+    // Fix schema ID conflicts for FHIR nested and generic types
+    options.CustomSchemaIds(type =>
+    {
+        var typeName = type.Name;
+
+        // Handle generic types by including type arguments
+        if (type.IsGenericType)
+        {
+            var genericTypeName = type.GetGenericTypeDefinition().Name;
+            var genericArgs = type.GetGenericArguments();
+            var genericArgNames = string.Join("", genericArgs.Select(arg =>
+            {
+                if (arg.DeclaringType != null)
+                {
+                    return $"{arg.DeclaringType.Name}{arg.Name}";
+                }
+                return arg.Name;
+            }));
+
+            typeName = $"{genericTypeName.Split('`')[0]}{genericArgNames}";
+        }
+
+        // Handle nested types
+        if (type.DeclaringType != null)
+        {
+            return $"{type.DeclaringType.Name}{typeName}";
+        }
+
+        return typeName;
+    });
+
     // Include XML comments if available
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);

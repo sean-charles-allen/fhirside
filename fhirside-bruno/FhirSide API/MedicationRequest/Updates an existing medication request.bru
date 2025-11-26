@@ -1,0 +1,777 @@
+meta {
+  name: Updates an existing medication request.
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/fhir/MedicationRequest/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 
+}
+
+body:json {
+  {
+    "HasOverflow": false,
+    "IdElement": {
+      "HasOverflow": false,
+      "ElementIdElement": {
+        "HasOverflow": false,
+        "ElementIdElement": "",
+        "ElementId": "",
+        "Extension": [
+          {
+            "HasOverflow": false,
+            "ElementIdElement": "",
+            "ElementId": "",
+            "Extension": [],
+            "TypeName": "",
+            "UrlElement": {
+              "HasOverflow": false,
+              "ElementIdElement": "",
+              "ElementId": "",
+              "Extension": [],
+              "ObjectValue": "",
+              "JsonValue": "",
+              "HasElements": false,
+              "TypeName": "",
+              "Value": ""
+            },
+            "Url": "",
+            "Value": {
+              "TypeName": "",
+              "HasOverflow": false,
+              "ElementIdElement": "",
+              "ElementId": "",
+              "Extension": []
+            }
+          }
+        ],
+        "ObjectValue": "",
+        "JsonValue": "",
+        "HasElements": false,
+        "TypeName": "",
+        "Value": ""
+      },
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "ObjectValue": "",
+      "JsonValue": "",
+      "HasElements": false,
+      "TypeName": "",
+      "Value": ""
+    },
+    "Id": "",
+    "Meta": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "TypeName": "",
+      "VersionIdElement": {},
+      "VersionId": "",
+      "LastUpdatedElement": {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "ObjectValue": "",
+        "HasElements": false,
+        "TypeName": "",
+        "Value": "",
+        "JsonValue": ""
+      },
+      "LastUpdated": "",
+      "SourceElement": {},
+      "Source": "",
+      "ProfileElement": [
+        {
+          "TypeName": "",
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "ObjectValue": "",
+          "JsonValue": "",
+          "HasElements": false
+        }
+      ],
+      "ProfileUri": [],
+      "Profile": [],
+      "Security": [
+        {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "DebuggerDisplay": "",
+          "TypeName": "",
+          "SystemElement": {},
+          "System": "",
+          "VersionElement": {},
+          "Version": "",
+          "CodeElement": {
+            "HasOverflow": false,
+            "ElementIdElement": {},
+            "ElementId": "",
+            "Extension": [
+              {}
+            ],
+            "ObjectValue": "",
+            "JsonValue": "",
+            "HasElements": false,
+            "Literal": "",
+            "System": "",
+            "TypeName": "",
+            "Value": ""
+          },
+          "Code": "",
+          "DisplayElement": {},
+          "Display": "",
+          "UserSelectedElement": {
+            "HasOverflow": false,
+            "ElementIdElement": {},
+            "ElementId": "",
+            "Extension": [
+              {}
+            ],
+            "ObjectValue": "",
+            "JsonValue": "",
+            "HasElements": false,
+            "TypeName": "",
+            "Value": false
+          },
+          "UserSelected": false
+        }
+      ],
+      "Tag": [
+        {}
+      ]
+    },
+    "ImplicitRulesElement": {},
+    "ImplicitRules": "",
+    "LanguageElement": {},
+    "Language": "",
+    "ResourceBase": "",
+    "VersionId": "",
+    "Text": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "TypeName": "",
+      "StatusElement": {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "ObjectValue": "",
+        "HasElements": false,
+        "Value": 0,
+        "TypeName": "",
+        "JsonValue": "",
+        "Literal": "",
+        "System": ""
+      },
+      "Status": 0,
+      "DivElement": {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "ObjectValue": "",
+        "JsonValue": "",
+        "HasElements": false,
+        "TypeName": "",
+        "Value": ""
+      },
+      "Div": ""
+    },
+    "Contained": [
+      {
+        "TypeName": "",
+        "HasOverflow": false,
+        "IdElement": {},
+        "Id": "",
+        "Meta": {},
+        "ImplicitRulesElement": {},
+        "ImplicitRules": "",
+        "LanguageElement": {},
+        "Language": "",
+        "ResourceBase": "",
+        "VersionId": ""
+      }
+    ],
+    "Extension": [
+      {}
+    ],
+    "ModifierExtension": [
+      {}
+    ],
+    "TypeName": "",
+    "Identifier": [
+      {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "TypeName": "",
+        "UseElement": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "ObjectValue": "",
+          "HasElements": false,
+          "Value": 0,
+          "TypeName": "",
+          "JsonValue": "",
+          "Literal": "",
+          "System": ""
+        },
+        "Use": 0,
+        "Type": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "TypeName": "",
+          "Coding": [
+            {}
+          ],
+          "TextElement": {},
+          "Text": ""
+        },
+        "SystemElement": {},
+        "System": "",
+        "ValueElement": {},
+        "Value": "",
+        "Period": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "TypeName": "",
+          "StartElement": {
+            "HasOverflow": false,
+            "ElementIdElement": {},
+            "ElementId": "",
+            "Extension": [
+              {}
+            ],
+            "ObjectValue": "",
+            "HasElements": false,
+            "JsonValue": "",
+            "TypeName": "",
+            "Value": ""
+          },
+          "Start": "",
+          "EndElement": {},
+          "End": ""
+        },
+        "Assigner": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "TypeName": "",
+          "ReferenceElement": {},
+          "Reference": "",
+          "TypeElement": {},
+          "Type": "",
+          "Identifier": "",
+          "DisplayElement": {},
+          "Display": "",
+          "Url": "",
+          "IsContainedReference": false
+        }
+      }
+    ],
+    "StatusElement": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "ObjectValue": "",
+      "HasElements": false,
+      "Value": 0,
+      "TypeName": "",
+      "JsonValue": "",
+      "Literal": "",
+      "System": ""
+    },
+    "Status": 0,
+    "StatusReason": {},
+    "IntentElement": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "ObjectValue": "",
+      "HasElements": false,
+      "Value": 0,
+      "TypeName": "",
+      "JsonValue": "",
+      "Literal": "",
+      "System": ""
+    },
+    "Intent": 0,
+    "Category": [
+      {}
+    ],
+    "PriorityElement": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "ObjectValue": "",
+      "HasElements": false,
+      "Value": 0,
+      "TypeName": "",
+      "JsonValue": "",
+      "Literal": "",
+      "System": ""
+    },
+    "Priority": 0,
+    "DoNotPerformElement": {},
+    "DoNotPerform": false,
+    "Reported": {},
+    "Medication": {},
+    "Subject": {},
+    "Encounter": {},
+    "SupportingInformation": [
+      {}
+    ],
+    "AuthoredOnElement": {},
+    "AuthoredOn": "",
+    "Requester": {},
+    "Performer": {},
+    "PerformerType": {},
+    "Recorder": {},
+    "ReasonCode": [
+      {}
+    ],
+    "ReasonReference": [
+      {}
+    ],
+    "InstantiatesCanonicalElement": [
+      {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "ObjectValue": "",
+        "JsonValue": "",
+        "HasElements": false,
+        "Version": "",
+        "Fragment": "",
+        "Uri": "",
+        "IsAbsolute": false,
+        "HasVersion": false,
+        "HasAnchor": false,
+        "TypeName": "",
+        "Value": ""
+      }
+    ],
+    "InstantiatesCanonical": [],
+    "InstantiatesUriElement": [
+      {}
+    ],
+    "InstantiatesUri": [],
+    "BasedOn": [
+      {}
+    ],
+    "GroupIdentifier": {},
+    "CourseOfTherapyType": {},
+    "Insurance": [
+      {}
+    ],
+    "Note": [
+      {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "TypeName": "",
+        "Author": {},
+        "TimeElement": {},
+        "Time": "",
+        "TextElement": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "ObjectValue": "",
+          "JsonValue": "",
+          "HasElements": false,
+          "TypeName": "",
+          "Value": ""
+        },
+        "Text": ""
+      }
+    ],
+    "DosageInstruction": [
+      {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "ModifierExtension": [
+          {}
+        ],
+        "TypeName": "",
+        "SequenceElement": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "ObjectValue": "",
+          "JsonValue": "",
+          "HasElements": false,
+          "TypeName": "",
+          "Value": 0
+        },
+        "Sequence": 0,
+        "TextElement": {},
+        "Text": "",
+        "AdditionalInstruction": [
+          {}
+        ],
+        "PatientInstructionElement": {},
+        "PatientInstruction": "",
+        "Timing": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "ModifierExtension": [
+            {}
+          ],
+          "TypeName": "",
+          "EventElement": [
+            {}
+          ],
+          "Event": [],
+          "Repeat": {
+            "HasOverflow": false,
+            "ElementIdElement": {},
+            "ElementId": "",
+            "Extension": [
+              {}
+            ],
+            "TypeName": "",
+            "Bounds": {},
+            "CountElement": {
+              "HasOverflow": false,
+              "ElementIdElement": {},
+              "ElementId": "",
+              "Extension": [
+                {}
+              ],
+              "ObjectValue": "",
+              "JsonValue": "",
+              "HasElements": false,
+              "TypeName": "",
+              "Value": 0
+            },
+            "Count": 0,
+            "CountMaxElement": {},
+            "CountMax": 0,
+            "DurationElement": {
+              "HasOverflow": false,
+              "ElementIdElement": {},
+              "ElementId": "",
+              "Extension": [
+                {}
+              ],
+              "ObjectValue": "",
+              "JsonValue": "",
+              "HasElements": false,
+              "TypeName": "",
+              "Value": ""
+            },
+            "Duration": "",
+            "DurationMaxElement": {},
+            "DurationMax": "",
+            "DurationUnitElement": {
+              "HasOverflow": false,
+              "ElementIdElement": {},
+              "ElementId": "",
+              "Extension": [
+                {}
+              ],
+              "ObjectValue": "",
+              "HasElements": false,
+              "Value": 0,
+              "TypeName": "",
+              "JsonValue": "",
+              "Literal": "",
+              "System": ""
+            },
+            "DurationUnit": 0,
+            "FrequencyElement": {},
+            "Frequency": 0,
+            "FrequencyMaxElement": {},
+            "FrequencyMax": 0,
+            "PeriodElement": {},
+            "Period": "",
+            "PeriodMaxElement": {},
+            "PeriodMax": "",
+            "PeriodUnitElement": {},
+            "PeriodUnit": 0,
+            "DayOfWeekElement": [
+              {
+                "HasOverflow": false,
+                "ElementIdElement": {},
+                "ElementId": "",
+                "Extension": [
+                  {}
+                ],
+                "ObjectValue": "",
+                "HasElements": false,
+                "Value": 0,
+                "TypeName": "",
+                "JsonValue": "",
+                "Literal": "",
+                "System": ""
+              }
+            ],
+            "DayOfWeek": [],
+            "TimeOfDayElement": [
+              {
+                "HasOverflow": false,
+                "ElementIdElement": {},
+                "ElementId": "",
+                "Extension": [
+                  {}
+                ],
+                "ObjectValue": "",
+                "HasElements": false,
+                "TypeName": "",
+                "Value": "",
+                "JsonValue": ""
+              }
+            ],
+            "TimeOfDay": [],
+            "WhenElement": [
+              {
+                "HasOverflow": false,
+                "ElementIdElement": {},
+                "ElementId": "",
+                "Extension": [
+                  {}
+                ],
+                "ObjectValue": "",
+                "HasElements": false,
+                "Value": 0,
+                "TypeName": "",
+                "JsonValue": "",
+                "Literal": "",
+                "System": ""
+              }
+            ],
+            "When": [],
+            "OffsetElement": {
+              "HasOverflow": false,
+              "ElementIdElement": {},
+              "ElementId": "",
+              "Extension": [
+                {}
+              ],
+              "ObjectValue": "",
+              "JsonValue": "",
+              "HasElements": false,
+              "TypeName": "",
+              "Value": 0
+            },
+            "Offset": 0
+          },
+          "Code": {}
+        },
+        "AsNeeded": {},
+        "Site": {},
+        "Route": {},
+        "Method": {},
+        "DoseAndRate": [
+          {
+            "HasOverflow": false,
+            "ElementIdElement": {},
+            "ElementId": "",
+            "Extension": [
+              {}
+            ],
+            "TypeName": "",
+            "Type": {},
+            "Dose": {},
+            "Rate": {}
+          }
+        ],
+        "MaxDosePerPeriod": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "TypeName": "",
+          "Numerator": {
+            "HasOverflow": false,
+            "ElementIdElement": {},
+            "ElementId": "",
+            "Extension": [
+              {}
+            ],
+            "TypeName": "",
+            "ValueElement": {},
+            "Value": "",
+            "ComparatorElement": {
+              "HasOverflow": false,
+              "ElementIdElement": {},
+              "ElementId": "",
+              "Extension": [
+                {}
+              ],
+              "ObjectValue": "",
+              "HasElements": false,
+              "Value": 0,
+              "TypeName": "",
+              "JsonValue": "",
+              "Literal": "",
+              "System": ""
+            },
+            "Comparator": 0,
+            "UnitElement": {},
+            "Unit": "",
+            "SystemElement": {},
+            "System": "",
+            "CodeElement": {},
+            "Code": ""
+          },
+          "Denominator": {}
+        },
+        "MaxDosePerAdministration": {},
+        "MaxDosePerLifetime": {}
+      }
+    ],
+    "DispenseRequest": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "ModifierExtension": [
+        {}
+      ],
+      "TypeName": "",
+      "InitialFill": {
+        "HasOverflow": false,
+        "ElementIdElement": {},
+        "ElementId": "",
+        "Extension": [
+          {}
+        ],
+        "ModifierExtension": [
+          {}
+        ],
+        "TypeName": "",
+        "Quantity": {},
+        "Duration": {
+          "HasOverflow": false,
+          "ElementIdElement": {},
+          "ElementId": "",
+          "Extension": [
+            {}
+          ],
+          "ValueElement": {},
+          "Value": "",
+          "ComparatorElement": {},
+          "Comparator": 0,
+          "UnitElement": {},
+          "Unit": "",
+          "SystemElement": {},
+          "System": "",
+          "CodeElement": {},
+          "Code": "",
+          "TypeName": ""
+        }
+      },
+      "DispenseInterval": {},
+      "ValidityPeriod": {},
+      "NumberOfRepeatsAllowedElement": {},
+      "NumberOfRepeatsAllowed": 0,
+      "Quantity": {},
+      "ExpectedSupplyDuration": {},
+      "Performer": {}
+    },
+    "Substitution": {
+      "HasOverflow": false,
+      "ElementIdElement": {},
+      "ElementId": "",
+      "Extension": [
+        {}
+      ],
+      "ModifierExtension": [
+        {}
+      ],
+      "TypeName": "",
+      "Allowed": {},
+      "Reason": {}
+    },
+    "PriorPrescription": {},
+    "DetectedIssue": [
+      {}
+    ],
+    "EventHistory": [
+      {}
+    ]
+  }
+}

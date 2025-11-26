@@ -1,0 +1,15 @@
+meta {
+  name: Gets an observation by ID.
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/fhir/Observation/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}

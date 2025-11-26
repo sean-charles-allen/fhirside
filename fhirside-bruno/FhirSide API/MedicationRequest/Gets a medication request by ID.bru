@@ -1,0 +1,15 @@
+meta {
+  name: Gets a medication request by ID.
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/fhir/MedicationRequest/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}

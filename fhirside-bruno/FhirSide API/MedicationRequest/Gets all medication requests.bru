@@ -1,0 +1,11 @@
+meta {
+  name: Gets all medication requests.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/fhir/MedicationRequest
+  body: none
+  auth: inherit
+}

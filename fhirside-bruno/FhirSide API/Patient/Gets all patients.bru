@@ -1,0 +1,11 @@
+meta {
+  name: Gets all patients.
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/fhir/Patient
+  body: none
+  auth: inherit
+}

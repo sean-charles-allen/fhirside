@@ -1,0 +1,15 @@
+meta {
+  name: Gets encounters for a specific patient.
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/fhir/Encounter/patient/:patientId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  patientId: 
+}
