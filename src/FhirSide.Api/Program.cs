@@ -1,16 +1,16 @@
+using FhirSide.Api.Formatters;
 using FhirSide.Core.Services;
-using Hl7.Fhir.Serialization;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers()
-    .AddJsonOptions(options =>
-    {
-        // Configure JSON serialization for FHIR resources
-        options.JsonSerializerOptions.PropertyNamingPolicy = null;
-    });
+builder.Services.AddControllers(options =>
+{
+    // Add FHIR JSON formatters for proper FHIR-compliant serialization
+    options.InputFormatters.Insert(0, new FhirJsonInputFormatter());
+    options.OutputFormatters.Insert(0, new FhirJsonOutputFormatter());
+});
 
 // Add FHIR services
 builder.Services.AddFhirServices();

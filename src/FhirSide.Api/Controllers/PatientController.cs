@@ -1,6 +1,5 @@
 using FhirSide.Core.Services;
 using Hl7.Fhir.Model;
-using Hl7.Fhir.Serialization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FhirSide.Api.Controllers;
